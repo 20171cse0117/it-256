@@ -1,7 +1,11 @@
+body{
+background-color:yellow;
+}
 p{
-color:red;text-align:centre;
+color:red;
+text-align:center;
 }
 h1{
 color:blue;
-font-style:30pt
+margin-left:20px;
 }
