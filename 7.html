@@ -1,0 +1,65 @@
+<html>
+    <head>Stack Ordering with moveback
+        <title>Stack Ordering with moveback</title>
+            
+            <style type="text/css">
+                #layer1
+                {
+                    border:solid thick black;
+                    background-color:brown;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:100px;
+                    left:200px;
+                    z-index:1;
+                }
+            #layer2
+                {
+                    border:solid thick black;
+                    background-color:gray;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:120px;
+                    left:220px;
+                    z-index:2;
+                }
+            #layer3
+                {
+                    border:solid thick black;
+                    background-color:white;
+                    padding:10px;
+                    width:300px;
+                    height:200px;
+                    position:absolute;
+                    top:140px;
+                    left:240px;
+                    z-index:3;
+                }
+            </style>
+    </head>
+    <body>
+        <script type=text/javascript>
+            var topLayer="layer3";
+            var origpos;
+            
+            function mover(toTop,pos)
+                {
+                    document.getElementById(toTop).style.zIndex="4";
+                    topLayer=toTop;
+                    origpos=pos;
+                }
+            
+            function moveBack()
+                {
+                    document.getElementById(topLayer).style.zIndex=origpos;
+                }
+        </script>
+        <p id=layer1 onMouseOver=mover('layer1','1'); onMouseOut=moveBack()>Becoming the head of any company is noteworthy, but becoming the CEO of one of the most high-profile businesses in the world gets you into the history books. That's exactly what Sundar Pichai did when he took the helm of Google in 2015 after just 11 years at the company. From humble beginnings as a middle-class student in India to one of the lead product developers on Google Chrome, Pichai's road to the top of Google has been full of twists and turns.</p>
+        <p id=layer2 onMouseOver=mover('layer2','2'); onMouseOut=moveBack()>By most metrics, Pichai's tenure as CEO has been an overwhelming success for the company. Alphabet's revenue is up more than 80% and the company's stock price has risen by almost 90% since his appointment. Given the consistent performance, it's worth asking: who is Sundar Pichai, and how did he advance to the top of Google in just 11 years?</p>
+        <p id=layer3 onMouseOver=mover('layer3','3'); onMouseOut=moveBack()>Pichai was born in the city of Chennai, India, in 1972. His father was no stranger to the corporate world, working as an electrical engineer for the British General Electric Company (not to be confused with the American conglomerate GE). His mother was a stenographer. Sundar grew up without a television or family car. He slept on the living room floor, along with his younger brother, as the modest two-room apartment had no additional bedrooms.</p>
+    </body>
+ </html>
